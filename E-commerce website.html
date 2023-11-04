@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E-commerce website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px grey; 
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background:rgb(4, 92, 92) ; 
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: orangered; 
+        }
+      body{
+        background-color: rgb(159, 159, 246);
+      }
+      #navitem{
+        color:rgb(4, 92, 92);
+        font-weight: bold;
+      }
+      #mainbox{
+        width: 70%;
+      }
+      .card{
+        height: 450px;
+        padding: 1.5%;
+        border: 2px solid rgb(4, 92, 92);
+        opacity: 0.95;
+
+      }
+      .card:hover{
+        border: 4px solid rgb(4, 92, 92);
+        color: rgb(4, 92, 92);
+        font-weight: bold;
+        opacity: 1;
+      }
+      footer{
+        color:rgb(4, 92, 92) ;
+        border-top:5px solid rgb(4, 92, 92) ;
+      }
+      footer h5{
+        color: rgb(4, 92, 92);
+        font-weight: bold;
+      }
+      footer a,li{
+        color: rgb(4, 92, 92);
+      }
+
+      @media screen and (max-width: 600px) {
+        #mainbox{
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <nav class="navbar navbar-expand-lg bg-light " style="background-color:rgb(159, 159, 246);border-bottom:4px solid rgb(4, 92, 92)">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" id="navitem">E-commerce</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" id="navitem">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                id="navitem">
+                Catagory
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" id="navitem">Electronics</a></li>
+                <li><a class="dropdown-item" href="#" id="navitem">Cloths</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#" id="navitem">Accesorries</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"id="navitem">About us</a>
+              </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <button class="btn btn-sm btn-outline-success"  >
+             <a href="./mycart.html" target="_blank" style="text-decoration: none;" id="navitem">My Cart</a> <span class="badge text-bg-danger" id="mycart"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://source.unsplash.com/1400x500/?watches" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/1400x500/?shirts" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/1400x500/?mouse" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="container-fluid" id="mainbox">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mb-4 mt-4">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="https://images-eu.ssl-images-amazon.com/images/I/61UzQMCRaeL._AC_UL450_SR450,320_.jpg" width="100%" height="200"></img>
+                <div class="card-body" style="height: 300;">
+                  <p id="item" class="card-text" style="height: 150px;" >Ambrane Unbreakable 60W / 3A Fast Charging 1.5m Braided Type C Cable for Smartphones, Tablets, Laptops & other Type C devices, PD Technology, 480Mbps Data Sync, Quick Charge 3.0 (RCT15A, Black)</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mt-3">
+                      <p  id="unit_price" class="btn btn-sm btn-outline-success">Rs.99</p>
+                    </div>
+                    <input type="Number" class="form-control btn btn-sm btn-outline-success" id="quantity" value="1" style="width: 50px; display:block;" min="1" max="10"/>
+                    <button type="button" class="btn btn-sm btn-outline-success " id="add_to_cart"  style="display: block;">Add to cart</button>
+
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="https://images-eu.ssl-images-amazon.com/images/I/516LU0H963L._AC_UL450_SR450,320_.jpg" width="100%" height="200"></img>
+                <div class="card-body">
+                  <p id="item" class="card-text" style="height: 150px;">Logitech B170 Wireless Mouse, 2.4 GHz with USB Nano Receiver, Optical Tracking, 12-Months Battery Life, Ambidextrous, PC/Mac/Laptop - Black</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mt-3">
+                      <p  id="unit_price" class="btn btn-sm btn-outline-success">Rs.499</p>
+                    </div>
+                    <input type="Number" class="form-control btn btn-sm btn-outline-success" id="quantity" value="1" style="width: 50px; display:block;" min="1" max="10"/>
+                    <button type="button" class="btn btn-sm btn-outline-success" id="add_to_cart"  style="display: block;">Add to cart</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="https://images-eu.ssl-images-amazon.com/images/I/71eVAHH3tsL._AC_UL450_SR450,320_.jpg" width="100%" height="200"></img>
+                <div class="card-body">
+                  <p id="item" class="card-text" style="height: 150px;">boAt Type C A325/A320 Tangle-free, Sturdy Type C Cable with 3A Rapid Charging & 480mbps Data Transmission(Black)</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mt-3">
+                      <p id="unit_price" class="btn btn-sm btn-outline-success" >Rs.125</p>
+                    </div>
+                    <input type="Number" class="form-control btn btn-sm btn-outline-success" id="quantity" value="1" style="width: 50px; display:block;" min="1" max="10"/>
+                    <button type="button" class="btn btn-sm btn-outline-success" id="add_to_cart" style="display: block;">Add to cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="https://m.media-amazon.com/images/I/613kyV33HrL._SX679_.jpg" width="100%" height="200"></img>
+                <div class="card-body">
+                  <p id="item" class="card-text" style="height: 150px;">SWADESI STUFF Men's Casual Chino Pants | Stylish Regular Fit Comfortable Trousers - Ideal for Everyday Wear</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mt-3">
+                      <p  id="unit_price" class="btn btn-sm btn-outline-success">Rs.499</p>
+                    </div>
+                    <input type="Number" class="form-control btn btn-sm btn-outline-success" id="quantity" value="1" style="width: 50px; display:block;" min="1" max="10"/>
+                    <button type="button" class="btn btn-sm btn-outline-success" id="add_to_cart"  style="display: block;">Add to cart</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="https://images-eu.ssl-images-amazon.com/images/I/71eUwDk8z+L._AC_UL450_SR450,320_.jpg" width="100%" height="200"></img>
+                <div class="card-body">
+                  <p id="item" class="card-text" style="height: 150px;">Allen Solly Men Polo</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mt-3">
+                      <p id="unit_price" class="btn btn-sm btn-outline-success" >Rs.699</p>
+                    </div>
+                    <input type="Number" class="form-control btn btn-sm btn-outline-success" id="quantity" value="1" style="width: 50px; display:block;" min="1" max="10"/>
+                    <button type="button" class="btn btn-sm btn-outline-success" id="add_to_cart"  style="display: block;">Add to cart</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="https://images-eu.ssl-images-amazon.com/images/I/61XzMtVz3PL._AC_UL450_SR450,320_.jpg" width="100%" height="200"></img>
+                <div class="card-body">
+                  <p id="item" class="card-text" style="height: 150px;">Dennis Lingo Men's Solid Slim Fit Cotton Casual Shirt with Spread Collar & Full Sleeves (Also Available in Plus Size)</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mt-3">
+                      <p id="unit_price" class="btn btn-sm btn-outline-success" >Rs.454</p>
+                    </div>
+                    <input type="Number" class="form-control btn btn-sm btn-outline-success" id="quantity" value="1" style="width: 50px; display:block;" min="1" max="10"/>
+                    <button type="button" class="btn btn-sm btn-outline-success" id="add_to_cart" style="display: block;">Add to cart</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="https://images-eu.ssl-images-amazon.com/images/I/61R-wGEwB1L._AC_UL450_SR450,320_.jpg" width="100%" height="200"></img>
+                <div class="card-body">
+                  <p id="item" class="card-text" style="height: 150px;">Fastrack Limitless X|Large 1.91" HD UltraVU Display|SingleSync BT Calling|100+ Sports Modes|Calculator|AI Voice Assistant|Calendar|100+ Watchfaces|Stress Monitor|24x7 HRM|IP68</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mt-3">
+                      <p   id="unit_price" class="btn btn-sm btn-outline-success" >Rs.1599</button>
+                    </div>
+                    <input type="Number" class="form-control btn btn-sm btn-outline-success" id="quantity" value="1" style="width: 50px; display:block;" min="1" max="10"/>
+                    <button type="button" class="btn btn-sm btn-outline-success" id="add_to_cart"  style="display: block;">Add to cart</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="https://images-eu.ssl-images-amazon.com/images/I/61wJNP17lEL._AC_UL450_SR450,320_.jpg" width="100%" height="200"></img>
+                <div class="card-body">
+                  <p id="item" class="card-text" style="height: 150px;">Noise Pulse Go Buzz Smart Watch with Advanced Bluetooth Calling, 1.69" TFT Display, SpO2, 100 Sports Mode with Auto Detection, Upto 7 Days Battery (2 Days with Heavy Calling) - Rose Pink</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mt-3">
+                      <p id="unit_price" class="btn btn-sm btn-outline-success">Rs.1999</button>
+                    </div>
+                    <input type="Number" class="form-control btn btn-sm btn-outline-success" id="quantity" value="1" style="width: 50px; display:block;" min="1" max="10"/>
+                    <button type="button" class="btn btn-sm btn-outline-success" id="add_to_cart" style="display: block;">Add to cart</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="https://images-eu.ssl-images-amazon.com/images/I/71l9xxzqg0L._AC_UL450_SR450,320_.jpg" width="100%" height="200"></img>
+                <div class="card-body">
+                  <p id="item" class="card-text"style="height: 150px;">beatXP Flux 1.45" (3.6 cm) Ultra HD Display Bluetooth Calling Smart Watch, 415 * 415px, 60Hz Refresh Rate, Rotary Crown, 500 Nits, Always On Display, Health Tracking, 100+ Sports Modes (Black)</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mt-3">
+                      <p id="unit_price" class="btn btn-sm btn-outline-success" >Rs.1299</p>
+                    </div>
+                    <input type="Number" class="form-control btn btn-sm btn-outline-success" id="quantity" value="1" style="width: 50px; display:block;" min="1" max="10"/>
+                    <button type="button" class="btn btn-sm btn-outline-success" id="add_to_cart" style="display: block;">Add to cart</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </main>
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-light ">
+      <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary" id="footer">
+        <div class="row">
+          <div class="col-lg-3 mb-3">
+            <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="Bootstrap">
+              <span class="fs-5" style="color: rgb(4, 92, 92);font-weight: bold;">E-commerce</span>
+            </a>
+            <ul class="list-unstyled small">
+              <li class="mb-2">Designed and built with all the love in the world by the <a href="/docs/5.3/about/team/">Bootstrap team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</li>
+              <li class="mb-2">Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
+              <li class="mb-2">Currently v5.3.2.</li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+            <h5>Links</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="/">Home</a></li>
+              <li class="mb-2"><a href="/docs/5.3/">Docs</a></li>
+              <li class="mb-2"><a href="/docs/5.3/examples/">Examples</a></li>
+              <li class="mb-2"><a href="https://icons.getbootstrap.com/">Icons</a></li>
+              <li class="mb-2"><a href="https://themes.getbootstrap.com/">Themes</a></li>
+              <li class="mb-2"><a href="https://blog.getbootstrap.com/">Blog</a></li>
+              <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap" target="_blank" rel="noopener">Swag Store</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>Guides</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="/docs/5.3/getting-started/">Getting started</a></li>
+              <li class="mb-2"><a href="/docs/5.3/examples/starter-template/">Starter template</a></li>
+              <li class="mb-2"><a href="/docs/5.3/getting-started/webpack/">Webpack</a></li>
+              <li class="mb-2"><a href="/docs/5.3/getting-started/parcel/">Parcel</a></li>
+              <li class="mb-2"><a href="/docs/5.3/getting-started/vite/">Vite</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>Projects</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">Bootstrap 5</a></li>
+              <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev" target="_blank" rel="noopener">Bootstrap 4</a></li>
+              <li class="mb-2"><a href="https://github.com/twbs/icons" target="_blank" rel="noopener">Icons</a></li>
+              <li class="mb-2"><a href="https://github.com/twbs/rfs" target="_blank" rel="noopener">RFS</a></li>
+              <li class="mb-2"><a href="https://github.com/twbs/examples/" target="_blank" rel="noopener">Examples repo</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>Community</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues" target="_blank" rel="noopener">Issues</a></li>
+              <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions" target="_blank" rel="noopener">Discussions</a></li>
+              <li class="mb-2"><a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener">Corporate sponsors</a></li>
+              <li class="mb-2"><a href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">Open Collective</a></li>
+              <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener">Stack Overflow</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="cart.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
+
+  </body>
+</html>
